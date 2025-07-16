@@ -5,7 +5,7 @@ import { userRegistrationValidator } from "../validators/index.js";
 
 const router = Router();
 
-// Factory pattern
+// Factory pattern -> initiate validator -> pass array to validate -> then invoke registerUser
 router.route("/register").post(userRegistrationValidator(), validate, registerUser);
 
 export default router
